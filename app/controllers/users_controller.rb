@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user, notice: 'Signup successfully.'
+      redirect_to '/', notice: 'Signup successfully.'
     else
       render :new, status: :unprocessable_entity
     end
